@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spencer Dewbury Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fredoka One', sans-serif;
+      background-color: #0a1a3c;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAxklEQVR4nO3WsQ3CUBTFUIIYInXWYRYmoWQV2CljUNH9/kg8u4peUlhWirsdz+N9GcxVC2huv4fzdd5XH+yP/fPP78f/AQXQApoCaAHN1g4YTjtgdZxEAbSApgBaQNMO0AKadsDqOIkCaAFNAbSAph2gBTTtgNVxEgXQApoCaAFNO0ALaNoBq+MkCqAFNAXQApp2gBbQtANWx0kUQAtoCqAFNO0ALaBpB6yOkyiAFtAUQAto2gFaQNMOWB0nUQAtoCmAFtB8AT1WAiAXnsx2AAAAAElFTkSuQmCC');
+      background-repeat: repeat;
+      color: white;
+    }
+    .tab-button {
+      padding: 0.5rem 1rem;
+      background-color: #1e3a8a;
+      border-radius: 0.375rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .tab-button:hover {
+      transform: translateY(-2px) scale(1.05);
+      background-color: #3b82f6;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    a {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #bfdbfe;
+    }
+    .pixel-icon {
+      width: 20px;
+      height: 20px;
+      image-rendering: pixelated;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <header class="mb-4">
+    <h1 class="text-3xl font-bold">Spencer Dewbury</h1>
+    <p class="text-xs mt-2">Journalist · Freelance Writer · Creative Writer · Digital Artist</p>
+  </header>
+
+  <nav class="flex flex-wrap justify-center space-x-2 mb-6">
+    <button class="tab-button" onclick="showTab('bio')">Bio</button>
+    <button class="tab-button" onclick="showTab('journalism')">Journalism</button>
+    <button class="tab-button" onclick="showTab('freelance')">Freelance</button>
+    <button class="tab-button" onclick="showTab('creative')">Creative</button>
+    <button class="tab-button" onclick="showTab('resume')">Resume</button>
+    <button class="tab-button" onclick="showTab('music')">Music</button>
+  </nav>
+
+  <main>
+    <section id="bio" class="tab-content active">
+      <div class="flex items-center mb-2">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKklEQVR4nGNgGGjACGP8////P0kaGRkZGRgYGJgodcGoAaMGDA4DBh4AAEJgBBgHY6L+AAAAAElFTkSuQmCC" class="pixel-icon" alt="bio icon"/>
+        <h2 class="text-xl font-semibold">About Me</h2>
+      </div>
+      <p>I’m a published journalist and freelance writer passionate about exploring subcultures, storytelling, and visual expression. My work spans journalism, creative writing, digital art, and music under the name Witch Hotel.</p>
+    </section>
+
+    <section id="journalism" class="tab-content">
+      <div class="flex items-center mb-2">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAJUlEQVR4nGNgGGjACGP8v87wnySNmhC9TJS6YNSAUQMGhwEDDwC31AMYpHwBowAAAABJRU5ErkJggg==" class="pixel-icon" alt="journalism icon"/>
+        <h2 class="text-xl font-semibold">Journalism</h2>
+      </div>
+      <p><a href="https://undergroundunderdogs.com/author/spencerdewbury/" target="_blank">Underground Underdogs</a></p>
+      <p><a href="https://www.bethelgrapevine.com/authors/spencer-dewbury" target="_blank">Bethel Grapevine</a></p>
+    </section>
+
+    <section id="freelance" class="tab-content">
+      <div class="flex items-center mb-2">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKklEQVR4nGNgGGjACGO0n/v1nxSNlUZsjAwMDAxMlLpg1IBRAwaHAQMPACHABBj3CcZeAAAAAElFTkSuQmCC" class="pixel-icon" alt="freelance icon"/>
+        <h2 class="text-xl font-semibold">Freelance</h2>
+      </div>
+      <p>More about my work and experience is available on <a href="https://www.linkedin.com/in/spencer-dewbury-88022a35b/" target="_blank">LinkedIn</a>.</p>
+    </section>
+
+    <section id="creative" class="tab-content">
+      <div class="flex items-center mb-2">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAKklEQVR4nGNgGGjACGP8z9zynySN030YGRgYGJgodcGoAaMGDA4DBh4AABgwBBjWSm66AAAAAElFTkSuQmCC" class="pixel-icon" alt="creative icon"/>
+        <h2 class="text-xl font-semibold">Creative Writing</h2>
+      </div>
+      <p>Short stories, poetry, and experiments in tone and genre live here.</p>
+    </section>
+
+    <section id="resume" class="tab-content">
+      <div class="flex items-center mb-2">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAK0lEQVR4nGNgGGjACGNMeDfhPykaC4QKGBkYGBiYKHXBqAGjBgwOAwYeAAAVkAQYXeVVmwAAAABJRU5ErkJggg==" class="pixel-icon" alt="resume icon"/>
+        <h2 class="text-xl font-semibold">Resume</h2>
+      </div>
+      <p><a href="https://www.linkedin.com/in/spencer-dewbury-88022a35b/" target="_blank">LinkedIn Profile</a></p>
+    </section>
+
+    <section id="music" class="tab-content">
+      <div class="flex items-center mb-2">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAK0lEQVR4nGNgGGjACGPsCr38nxSNbqt1GRkYGBiYKHXBqAGjBgwOAwYeAAANUAQYiNLv5AAAAABJRU5ErkJggg==" class="pixel-icon" alt="music icon"/>
+        <h2 class="text-xl font-semibold">Music</h2>
+      </div>
+      <p><a href="https://soundcloud.com/witchhotel" target="_blank">Witch Hotel on SoundCloud</a></p>
+    </section>
+  </main>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      const section = document.getElementById(id);
+      if (section) section.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', () => showTab('bio'));
+  </script>
+</body>
+</html>
